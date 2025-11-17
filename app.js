@@ -3,15 +3,13 @@ document.addEventListener("DOMContentLoaded", () => {
   const sections = document.querySelectorAll(".section");
 
   function cargarMarkdown(idSeccion) {
-    fetch(`${idSeccion}.md`)
-      .then(res => res.text())
-      .then(md => {
-        // Convertir markdown a HTML
-        const html = marked.parse(md);
-        document.getElementById(idSeccion).innerHTML = html;
-      });
-  }
-
+  fetch(`${idSeccion}.md`)
+    .then(res => res.text())
+    .then(md => {
+      const html = marked.parse(md);
+      document.getElementById("content").innerHTML = html;
+    });
+}
   // Mostrar la primera sección
   const inicial = "presentacion";
   cargarMarkdown(inicial);

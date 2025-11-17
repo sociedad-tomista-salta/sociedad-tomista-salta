@@ -117,30 +117,24 @@ footer{
   nav ul{ gap:.6rem; }
   main#content{ padding-top:180px; }
 }
-/* ─────────── HEADER CON LOGO Y TÍTULO ─────────── */
 .header-sociedad {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 25px 0;
+
+  padding: 20px 0;
   background-color: #000;
   color: #fff;
-  border-bottom: 2px solid #444;
-  font-family: "Cinzel", serif; /* estilo gótico/clásico */
+  border-bottom: 1px solid #444;
+
+  font-family: "Cinzel", serif;
 }
 
-/* LOGO */
-.header-sociedad .logo-sts {
-  width: 40px;         /* ajustá a gusto */
-  height: auto;
+.logo-sts {
+  width: 150px;      /* ← Tamaño fijo */
+  height: auto;      /* ← Mantiene proporciones */
+  object-fit: contain;
+  display: block;
   margin-bottom: 10px;
-}
-
-/* TÍTULO */
-.header-sociedad h1 {
-  font-size: 2rem;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  margin: 0;
 }

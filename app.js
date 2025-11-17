@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const sections = document.querySelectorAll(".section");
 
   function cargarMarkdown(idSeccion) {
-    fetch(`contenido/${idSeccion}.md`)
+    fetch(`${idSeccion}.md`)
       .then(res => res.text())
       .then(md => {
         // Convertir markdown a HTML

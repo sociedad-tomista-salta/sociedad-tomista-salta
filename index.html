@@ -1,46 +1,46 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Sociedad Tomista Salta</title>
+
+  <!-- Tipografía gótica -->
+  <link href="https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <header>
+    <div class="container">
+      <h1>Sociedad Tomista Salta</h1>
+      <nav>
+        <ul>
+          <li><a href="#" data-section="presentacion">Inicio</a></li>
+          <li><a href="#" data-section="formacion">Formación</a></li>
+          <li><a href="#" data-section="difusion">Difusión</a></li>
+          <li><a href="#" data-section="comunidad">Comunidad</a></li>
+          <li><a href="#" data-section="espiritual">Espiritualidad</a></li>
+          <li><a href="#" data-section="contacto">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-<header>
-  <h1>Sociedad Tomista Salta</h1>
-  <nav>
-    <ul>
-      <li><a href="#" data-section="presentacion">Inicio</a></li>
-      <li><a href="#" data-section="formacion">Formación</a></li>
-      <li><a href="#" data-section="difusion">Difusión</a></li>
-      <li><a href="#" data-section="comunidad">Comunidad</a></li>
-      <li><a href="#" data-section="espiritual">Espiritualidad</a></li>
-      <li><a href="#" data-section="contacto">Contacto</a></li>
-    </ul>
-  </nav>
-</header>
+  <main id="content" class="container">
+    <!-- Aquí se inyectará el Markdown convertido a HTML -->
+    <h2>Bienvenido a la Sociedad Tomista de Salta</h2>
+    <p>Seleccioná una sección del menú para ver su contenido.</p>
+  </main>
 
-<main>
+  <footer>
+    <p>&copy; 2025 Sociedad Tomista Salta</p>
+  </footer>
 
-  <section id="presentacion" class="section"></section>
-  <section id="formacion" class="section"></section>
-  <section id="difusion" class="section"></section>
-  <section id="comunidad" class="section"></section>
-  <section id="espiritual" class="section"></section>
-  <section id="contacto" class="section"></section>
-
-</main>
-
-<footer>
-  <p>&copy; 2025 Sociedad Tomista Salta</p>
-</footer>
-
-<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-<script src="app.js"></script>
-
+  <!-- Marked (Markdown -> HTML) -->
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <!-- Tu JS -->
+  <script src="app.js"></script>
 </body>
 </html>
-

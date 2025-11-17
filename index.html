@@ -6,29 +6,31 @@
   <title>Sociedad Tomista Salta</title>
 
   <!-- Tipografía gótica -->
- <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
+
   <header class="header-sociedad">
-    
-      <img src="logo_sts.png" alt="Sociedad Tomista Salta" class="logo-sts">
-      <h1>Sociedad Tomista Salta</h1>
+    <img src="logo_sts.png" alt="Sociedad Tomista Salta" class="logo-sts">
+    <h1>Sociedad Tomista Salta</h1>
   </header>
-  <nav>
-      <ul>
-          <li><a href="#" data-section="presentacion">Inicio</a></li>
-          <li><a href="#" data-section="formacion">Formación</a></li>
-          <li><a href="#" data-section="difusion">Difusión</a></li>
-          <li><a href="#" data-section="comunidad">Comunidad</a></li>
-          <li><a href="#" data-section="espiritual">Espiritualidad</a></li>
-          <li><a href="#" data-section="contacto">Contacto</a></li>
-      </ul>
+
+  <nav class="navbar">
+    <ul>
+      <li><a href="#" data-section="presentacion">Inicio</a></li>
+      <li><a href="#" data-section="formacion">Formación</a></li>
+      <li><a href="#" data-section="difusion">Difusión</a></li>
+      <li><a href="#" data-section="comunidad">Comunidad</a></li>
+      <!-- CORREGIDO ↓↓↓ -->
+      <li><a href="#" data-section="espiritualidad">Espiritualidad</a></li>
+      <li><a href="#" data-section="contacto">Contacto</a></li>
+    </ul>
   </nav>
 
   <main id="content">
-    <!-- Aquí se inyectará el Markdown convertido a HTML -->
     <h2>Bienvenido a la Sociedad Tomista de Salta</h2>
     <p>Seleccioná una sección del menú para ver su contenido.</p>
   </main>
@@ -37,9 +39,10 @@
     <p>&copy; 2025 Sociedad Tomista Salta</p>
   </footer>
 
-  <!-- Marked (Markdown -> HTML) -->
+  <!-- Marked -->
   <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-  <!-- Tu JS -->
+  <!-- JS -->
   <script src="app.js"></script>
+
 </body>
 </html>

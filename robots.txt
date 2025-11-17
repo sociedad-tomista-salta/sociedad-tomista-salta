@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://sociedad-tomista-salta.github.io/sociedad-tomista-salta/sitemap.xml

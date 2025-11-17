@@ -1,85 +1,119 @@
-body {
-  font-family: 'Cormorant Garamond', serif;
-  margin: 0;
-  background-color: #f7f6f2;
-  color: #2c2c2c;
-  line-height: 1.6;
+:root{
+  --bg: #fff;
+  --text: #111;
+  --accent: #000;
 }
 
-/* Tipografía gótica (archivo Google Fonts) */
-@import url('https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&display=swap');
-
-header {
-  background-color: #000;
-  color: #fff;
-  padding: 1.2rem 0;
-  text-align: center;
-  position: fixed;
-  width: 100%;
-  top: 0;
-  z-index: 10;
-  box-shadow: 0px 4px 8px rgba(0,0,0,0.4);
+/* Reset y base */
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family: "Cormorant Garamond", serif;
+  background: #f7f6f2;
+  color:var(--text);
+  -webkit-font-smoothing:antialiased;
 }
 
-header h1 {
-  font-family: 'UnifrakturCook', cursive;
-  font-size: 2.3rem;
-  margin: 0;
-  letter-spacing: 1px;
+/* Header gótico fijo */
+header{
+  background:#000;
+  color:#fff;
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  z-index:1000;
+  box-shadow:0 4px 8px rgba(0,0,0,0.4);
 }
 
-nav ul {
-  margin-top: 0.8rem;
-  list-style: none;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-  gap: 1.5rem;
+header .container{
+  max-width:1100px;
+  margin:0 auto;
+  padding:1rem;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
 }
 
-nav a {
-  color: #ffffff;
-  text-decoration: none;
-  font-weight: bold;
-  letter-spacing: 0.5px;
-  font-size: 1.1rem;
-  position: relative;
+header h1{
+  margin:0;
+  font-family: "UnifrakturCook", cursive;
+  font-size:2rem;
+  letter-spacing:1px;
 }
 
-nav a::after {
-  content: '';
-  position: absolute;
-  width: 0%;
-  height: 2px;
-  background: white;
-  left: 0;
-  bottom: -4px;
-  transition: width 0.3s ease;
+/* Nav */
+nav ul{
+  margin:0.6rem 0 0 0;
+  padding:0;
+  display:flex;
+  gap:1.2rem;
+  list-style:none;
+  flex-wrap:wrap;
+  justify-content:center;
 }
 
-nav a:hover::after {
-  width: 100%;
+nav a{
+  color:#fff;
+  text-decoration:none;
+  font-weight:700;
+  font-size:1rem;
+  position:relative;
+  padding:0.2rem 0.1rem;
+  transition:opacity .18s ease;
 }
 
-main {
-  padding-top: 130px; /* para dejar espacio al header fijo */
+nav a::after{
+  content:'';
+  position:absolute;
+  left:0;
+  bottom:-6px;
+  height:2px;
+  width:0%;
+  background:#fff;
+  transition:width .28s ease;
 }
 
+nav a:hover{ opacity:.9; }
+nav a:hover::after{ width:100%; }
 
-section {
-  margin-bottom: 2rem;
+/* Contenedor principal (espacio para header fijo) */
+.container{
+  max-width:1100px;
+  margin:0 auto;
+  padding:1rem;
 }
 
-footer {
-  background-color: #332e1f;
-  color: #fff;
-  text-align: center;
-  padding: 1rem 0;
-}
-.section {
-  display: none;
+/* Empujar el main por debajo del header fijo */
+main#content{
+  padding-top:140px; /* espacio para header */
+  padding-bottom:3rem;
+  min-height:60vh;
 }
 
-.section.active {
-  display: block;
+/* Estética del contenido convertido */
+main#content h1, main#content h2, main#content h3{
+  margin-top:1rem;
+  font-weight:600;
+}
+
+main#content p{
+  margin:0.6rem 0 1rem 0;
+  line-height:1.6;
+}
+
+/* Footer */
+footer{
+  background:#111;
+  color:#fff;
+  text-align:center;
+  padding:1rem 0;
+  margin-top:2rem;
+}
+
+/* Responsive */
+@media (max-width:600px){
+  header h1{ font-size:1.4rem; }
+  nav ul{ gap:.6rem; }
+  main#content{ padding-top:180px; }
 }

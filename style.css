@@ -6,37 +6,65 @@ body {
   line-height: 1.6;
 }
 
+/* Tipografía gótica (archivo Google Fonts) */
+@import url('https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&display=swap');
+
 header {
-  background-color: #332e1f;
+  background-color: #000;
   color: #fff;
-  padding: 1.5rem 0;
+  padding: 1.2rem 0;
   text-align: center;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 10;
+  box-shadow: 0px 4px 8px rgba(0,0,0,0.4);
+}
+
+header h1 {
+  font-family: 'UnifrakturCook', cursive;
+  font-size: 2.3rem;
+  margin: 0;
+  letter-spacing: 1px;
 }
 
 nav ul {
+  margin-top: 0.8rem;
   list-style: none;
   padding: 0;
   display: flex;
   justify-content: center;
-  gap: 1.2rem;
-  margin-top: 0.5rem;
+  gap: 1.5rem;
 }
 
 nav a {
-  color: #f7f6f2;
+  color: #ffffff;
   text-decoration: none;
-  font-weight: 600;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  font-size: 1.1rem;
+  position: relative;
 }
 
-nav a:hover {
-  text-decoration: underline;
+nav a::after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background: white;
+  left: 0;
+  bottom: -4px;
+  transition: width 0.3s ease;
+}
+
+nav a:hover::after {
+  width: 100%;
 }
 
 main {
-  max-width: 900px;
-  margin: 2rem auto;
-  padding: 0 1rem;
+  padding-top: 130px; /* para dejar espacio al header fijo */
 }
+
 
 section {
   margin-bottom: 2rem;

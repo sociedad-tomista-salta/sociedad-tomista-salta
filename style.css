@@ -1,59 +1,67 @@
+/* Paleta */
 :root{
-  --bg: #fff;
-  --text: #111;
-  --accent: #000;
+  --bg: #000;
+  --text: #fff;
 }
 
-/* Reset y base */
-*{box-sizing:border-box}
+/* Reset */
+*{ box-sizing:border-box; }
+
 body{
   margin:0;
   font-family: "Cormorant Garamond", serif;
-  background: #f7f6f2;
-  color:var(--text);
+  background:#000;
+  color:#fff;
   -webkit-font-smoothing:antialiased;
 }
 
-/* Header gótico fijo */
-header{
-  background:#000;
-  color:#fff;
-  position:fixed;
-  top:0;
-  left:0;
-  width:100%;
-  z-index:1000;
-  box-shadow:0 4px 8px rgba(0,0,0,0.4);
-}
-
-header .container{
-  max-width:1100px;
-  margin:0 auto;
-  padding:1rem;
+/* --- HEADER --- */
+.header-sociedad {
   display:flex;
   flex-direction:column;
   align-items:center;
-}
-
-header h1{
-  margin:0;
-  font-family: "UnifrakturCook", cursive;
-  font-size:2rem;
-  letter-spacing:1px;
-}
-
-/* Nav */
-nav ul{
-  margin:0.6rem 0 0 0;
-  padding:0;
-  display:flex;
-  gap:1.2rem;
-  list-style:none;
-  flex-wrap:wrap;
   justify-content:center;
+
+  padding:20px 0;
+  background:#000;
+  color:#fff;
+  border-bottom:1px solid #444;
+
+  font-family:"Cinzel", serif;
 }
 
-nav a{
+.logo-sts {
+  width:150px;
+  height:auto;
+  object-fit:contain;
+  display:block;
+  margin-bottom:10px;
+}
+
+.header-sociedad h1 {
+  margin:0;
+  font-size:2rem;
+}
+
+/* --- NAVBAR --- */
+.navbar {
+  background:#111;
+  border-bottom:1px solid #444;
+  padding:10px 0;
+}
+
+.navbar ul {
+  list-style:none;
+  margin:0;
+  padding:0;
+
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:1.2rem;
+}
+
+.navbar a {
   color:#fff;
   text-decoration:none;
   font-weight:700;
@@ -63,7 +71,7 @@ nav a{
   transition:opacity .18s ease;
 }
 
-nav a::after{
+.navbar a::after{
   content:'';
   position:absolute;
   left:0;
@@ -74,35 +82,26 @@ nav a::after{
   transition:width .28s ease;
 }
 
-nav a:hover{ opacity:.9; }
-nav a:hover::after{ width:100%; }
+.navbar a:hover { opacity:.9; }
+.navbar a:hover::after { width:100%; }
 
-/* Contenedor principal (espacio para header fijo) */
-.container{
-  max-width:1100px;
-  margin:0 auto;
-  padding:1rem;
-}
-
-/* Empujar el main por debajo del header fijo */
-main#content{
-  padding-top:140px; /* espacio para header */
-  padding-bottom:3rem;
+/* --- CONTENIDO --- */
+main#content {
+  padding:20px;
+  max-width:900px;
+  margin:30px auto;
   min-height:60vh;
 }
 
-/* Estética del contenido convertido */
-main#content h1, main#content h2, main#content h3{
+main#content h1,
+main#content h2,
+main#content h3 {
   margin-top:1rem;
   font-weight:600;
+  font-family:"Cinzel", serif;
 }
 
-main#content p{
-  margin:0.6rem 0 1rem 0;
-  line-height:1.6;
-}
-
-/* Footer */
+/* --- FOOTER --- */
 footer{
   background:#111;
   color:#fff;
@@ -111,30 +110,8 @@ footer{
   margin-top:2rem;
 }
 
-/* Responsive */
+/* --- Responsive --- */
 @media (max-width:600px){
-  header h1{ font-size:1.4rem; }
-  nav ul{ gap:.6rem; }
-  main#content{ padding-top:180px; }
-}
-.header-sociedad {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-
-  padding: 20px 0;
-  background-color: #000;
-  color: #fff;
-  border-bottom: 1px solid #444;
-
-  font-family: "Cinzel", serif;
-}
-
-.logo-sts {
-  width: 150px;      /* ← Tamaño fijo */
-  height: auto;      /* ← Mantiene proporciones */
-  object-fit: contain;
-  display: block;
-  margin-bottom: 10px;
+  .header-sociedad h1{ font-size:1.4rem; }
+  .navbar ul{ gap:.6rem; }
 }

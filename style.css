@@ -45,9 +45,10 @@ body{
 
 /* --- NAVBAR --- */
 .navbar {
-  background:#111;
+ background:#111;
   border-bottom:1px solid #444;
   padding:10px 0;
+  border-top:2px solid red; /* DEBUG TEMPORAL */
 }
 
 .navbar ul {

@@ -1,19 +1,16 @@
-/* ================================================================
-   PALETA Y VARIABLES
-================================================================ */
+/* -------------------------------------- */
+/* PALETA Y RESET                         */
+/* -------------------------------------- */
 :root {
-  --bg: #000000;
-  --text: #ffffff;
-  --accent: #7A0A0A;         /* rojo profundo */
-  --accent-light: #B01010;
-  --maxw: 950px;
+  --bg: #000;
+  --text: #fff;
 }
 
-/* Reset */
-* { box-sizing: border-box; }
+* {
+  box-sizing: border-box;
+}
+
 body {
-   /*veamos si con el padding se corrige el problema con el navbar*/
-   padding-top: 220px;
   margin: 0;
   background: var(--bg);
   color: var(--text);
@@ -21,175 +18,153 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-/* ================================================================
-   HEADER
-================================================================ */
+/* -------------------------------------- */
+/* HEADER FIJO                            */
+/* -------------------------------------- */
 .header-sociedad {
-position: fixed;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   z-index: 1000;
 
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 15px 0;
-
   background: #000;
   border-bottom: 1px solid #333;
 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  padding: 10px 0 5px 0;
 }
 
 .logo-sts {
-  width: 120px;              /* más equilibrado */
+  width: 120px; /* tamaño ideal para móvil */
   height: auto;
+  object-fit: contain;
   display: block;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 }
 
-/* Título principal */
 .header-sociedad h1 {
   margin: 0;
-  font-size: 2.3rem;
+  padding: 0;
+  font-size: 1.8rem;
   font-family: "Cinzel", serif;
-  letter-spacing: 2px;       /* más elegante */
-  text-transform: uppercase;
-  font-weight: 700;
-/*veamos si mejora con esto el título:*/
-   width: 100%;
-text-align: center;
-
+  text-align: center;
 }
 
-/* ================================================================
-   NAVBAR
-================================================================ */
+/* -------------------------------------- */
+/* NAVBAR FIJO DEBAJO DEL HEADER          */
+/* -------------------------------------- */
 .navbar {
   position: fixed;
-  top: 140px;  /* ← ADAPTADO a la altura real del header */
+  top: 130px;   /* coincide con el alto del header */
   left: 0;
   width: 100%;
+  z-index: 900;
+
   background: #111;
   border-bottom: 1px solid #444;
-  padding: 10px 0;
-  z-index: 900;
+
+  padding: 12px 0;
 }
 
 .navbar ul {
   list-style: none;
-  padding: 0;
   margin: 0;
+  padding: 0;
 
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 1.4rem;
+  gap: 1.2rem;
 }
 
 .navbar a {
-  color: var(--text);
+  color: #fff;
   text-decoration: none;
-  font-weight: 600;
-  font-size: 1.05rem;
+  font-weight: 700;
+  font-size: 1rem;
   position: relative;
-  padding-bottom: 2px;
-  transition: opacity .2s ease;
+  padding: 0.2rem 0.1rem;
+  transition: opacity .18s ease;
 }
 
-/* Subrayado suave */
 .navbar a::after {
-  content: "";
+  content: '';
   position: absolute;
   left: 0;
-  bottom: -4px;
-  width: 0%;
+  bottom: -6px;
   height: 2px;
-  background: var(--accent);
+  width: 0%;
+  background: #fff;
   transition: width .28s ease;
 }
 
 .navbar a:hover {
-  opacity: .85;
+  opacity: .9;
 }
-
 .navbar a:hover::after {
   width: 100%;
 }
 
-/* ================================================================
-   CONTENIDO
-================================================================ */
+/* -------------------------------------- */
+/* CONTENIDO                              */
+/* -------------------------------------- */
 main#content {
-  padding: 40px 20px;
-  max-width: var(--maxw);
+  max-width: 900px;
   margin: 0 auto;
-  line-height: 1.55;
-   padding-top: 80px; /* 140px del nav + 80px de header aproximado */
+
+  /* espacio para header + nav */
+  padding-top: 230px;
+  padding-bottom: 50px;
+
+  min-height: 60vh;
 }
 
-/* Títulos del contenido */
 main#content h1,
 main#content h2,
 main#content h3 {
   font-family: "Cinzel", serif;
-  font-weight: 700;
-  letter-spacing: 1px;
-  color: var(--text);
-}
-
-main#content h1 {
-  font-size: 2rem;
-  margin-top: 1.2rem;
-  border-bottom: 1px solid var(--accent);
-  padding-bottom: 6px;
-}
-
-main#content h2 {
-  font-size: 1.6rem;
-  margin-top: 1.2rem;
-  color: #ddd;
-}
-
-main#content h3 {
-  font-size: 1.3rem;
+  font-weight: 600;
   margin-top: 1rem;
-  color: #ccc;
 }
 
-/* Párrafos */
 main#content p {
-  margin: 0.7rem 0;
-  font-size: 1.14rem;
+  line-height: 1.6;
 }
 
-/* Citas */
-blockquote {
-  border-left: 3px solid var(--accent);
-  padding-left: 15px;
-  font-style: italic;
-  margin: 1.2rem 0;
-  color: #e2e2e2;
-}
-
-/* ================================================================
-   FOOTER
-================================================================ */
+/* -------------------------------------- */
+/* FOOTER                                 */
+/* -------------------------------------- */
 footer {
-  background: #080808;
-  color: var(--text);
+  background: #111;
+  color: #fff;
   text-align: center;
-  padding: 1.2rem 0;
-  margin-top: 3rem;
-  border-top: 1px solid #222;
+  padding: 1rem 0;
+  margin-top: 2rem;
 }
 
-/* ================================================================
-   RESPONSIVE
-================================================================ */
+/* -------------------------------------- */
+/* RESPONSIVE                             */
+/* -------------------------------------- */
 @media (max-width: 600px) {
-  .header-sociedad h1 { font-size: 1.7rem; }
-  .logo-sts { width: 95px; }
-  .navbar ul { gap: 0.8rem; }
-  main#content { padding: 25px 15px; }
+
+  .logo-sts {
+    width: 110px;
+  }
+
+  .header-sociedad h1 {
+    font-size: 1.6rem;
+  }
+
+  .navbar {
+    top: 125px;
+  }
+
+  main#content {
+    padding-top: 220px;
+  }
 }

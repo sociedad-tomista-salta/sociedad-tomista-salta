@@ -109,9 +109,9 @@ main#content {
   max-width: 900px;
   margin: 0 auto;
   padding: 20px;
-  
-  /* Este padding top empuja todo según el header dinámico */
-  padding-top: calc(170px);
+
+  min-height: 60vh;
+  padding-top: 0; /* Será agregado dinámicamente */
 }
 
 footer {

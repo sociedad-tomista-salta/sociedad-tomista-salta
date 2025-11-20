@@ -49,7 +49,18 @@
   <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 
   <!-- JS de la página -->
-  <script src="app.js"></script>
+  <script src="app.js">
+    function ajustarPadding() {
+    const wrapper = document.querySelector(".header-wrapper");
+    const main = document.querySelector("main#content");
+
+    const altura = wrapper.offsetHeight;
+    main.style.paddingTop = (altura + 20) + "px"; 
+  }
+
+  window.addEventListener("load", ajustarPadding);
+  window.addEventListener("resize", ajustarPadding);
+  </script>
 </body>
 
 </html>

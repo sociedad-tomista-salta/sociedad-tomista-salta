@@ -1,142 +1,167 @@
-/* -------------------------------------- */
-/* BASE */
-/* -------------------------------------- */
-:root {
-  --bg: #000;
-  --text: #fff;
-}
+/* =========================================================
+   ESTÉTICA NEOTOMISTA ELEGANTE – CSS COMPLETO
+   ========================================================= */
 
-* {
-  box-sizing: border-box;
-}
+/* ------------------------------
+   PALETA DE COLORES
+   ------------------------------ */
+/*
+  Marfil suave .......... #F6F2E9
+  Borgoña tomista ....... #6B1E27
+  Azul profundo .......... #1B2A41
+  Dorado clásico ......... #C2A878
+  Negro suave ............ #222
+*/
+
+/* ------------------------------
+   AJUSTES GENERALES
+   ------------------------------ */
 
 body {
-  margin: 0;
-  background: var(--bg);
-  color: var(--text);
-  font-family: "Cormorant Garamond", serif;
-  -webkit-font-smoothing: antialiased;
+    margin: 0;
+    padding: 0;
+    background-color: #F6F2E9;
+    color: #1B2A41;
+    font-family: "Merriweather", serif;
+    line-height: 1.7;
 }
 
-/* -------------------------------------- */
-/* HEADER FIJO */
-/* -------------------------------------- */
-.header-wrapper {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 2000;
-
-  background: #000;
-  border-bottom: 1px solid #333;
+/* Evitar que el body suba detrás del header */
+body, html {
+    scroll-padding-top: 120px; 
 }
 
-.header-sociedad {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+/* ------------------------------
+   HEADER
+   ------------------------------ */
 
-  padding: 15px 0 10px 0;
+header {
+    text-align: center;
+    padding: 20px 10px;
+    background-color: transparent;
 }
 
-.logo-sts {
-  width: 130px;
-  height: auto;
-  margin-bottom: 5px;
+header img {
+    width: 160px;
+    height: auto;
+    display: block;
+    margin: 0 auto 10px auto;
 }
 
-.header-sociedad h1 {
-  font-family: "Cinzel", serif;
-  margin: 0;
-  font-size: 2rem;
-  text-align: center;
+header h1 {
+    margin: 0;
+    font-size: 2rem;
+    color: #6B1E27;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
 }
 
-/* -------------------------------------- */
-/* NAV – pegado al header automáticamente */
-/* -------------------------------------- */
+/* ------------------------------
+   NAVBAR
+   ------------------------------ */
+
 .navbar {
-  background: #111;
-  border-bottom: 1px solid #444;
-  padding: 10px 0;
-}
-
-.navbar ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 1.2rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: #1B2A41;
+    padding: 12px 0;
+    text-align: center;
+    border-bottom: 3px solid #C2A878;
 }
 
 .navbar a {
-  color: #fff;
-  text-decoration: none;
-  font-weight: 700;
-  font-size: 1rem;
-  position: relative;
-  transition: opacity .18s ease;
+    color: #F6F2E9;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    transition: color 0.3s ease;
 }
 
 .navbar a:hover {
-  opacity: 0.85;
+    color: #C2A878;
 }
 
-.navbar a::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -4px;
-  width: 0%;
-  height: 2px;
-  background: #fff;
-  transition: width .25s ease;
+/* ------------------------------
+   SECCIONES
+   ------------------------------ */
+
+section {
+    max-width: 900px;
+    margin: 60px auto;
+    padding: 20px;
+    background-color: #FFFFFF;
+    border-left: 5px solid #C2A878;
+    box-shadow: 0 0 15px rgba(0,0,0,0.08);
 }
 
-.navbar a:hover::after {
-  width: 100%;
+section h2 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: #6B1E27;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
-/* -------------------------------------- */
-/* CONTENIDO - El truco para que funcione */
-/* -------------------------------------- */
-main#content {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 20px;
-
-  min-height: 60vh;
-  padding-top: 0; /* Será agregado dinámicamente */
+section p {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
 }
+
+/* ------------------------------
+   LISTAS
+   ------------------------------ */
+
+ul {
+    padding-left: 20px;
+}
+
+li {
+    margin-bottom: 8px;
+}
+
+/* ------------------------------
+   FOOTER
+   ------------------------------ */
 
 footer {
-  background: #111;
-  color: #fff;
-  text-align: center;
-  padding: 1rem 0;
-  margin-top: 2rem;
+    text-align: center;
+    background-color: #1B2A41;
+    padding: 20px;
+    margin-top: 40px;
+    color: #F6F2E9;
+    border-top: 3px solid #C2A878;
 }
 
-/* -------------------------------------- */
-/* RESPONSIVE */
-/* -------------------------------------- */
-@media (max-width: 600px) {
-  .logo-sts {
-    width: 110px;
-  }
-
-  .header-sociedad h1 {
-    font-size: 1.5rem;
-  }
-
-  /* Ajusta el espacio total del header */
-  main#content {
-    padding-top: calc(160px);
-  }
+footer p {
+    margin: 0;
+    font-size: 0.9rem;
 }
 
+/* ------------------------------
+   RESPONSIVE – MÓVIL
+   ------------------------------ */
+
+@media (max-width: 768px) {
+
+    header img {
+        width: 130px;
+    }
+
+    header h1 {
+        font-size: 1.6rem;
+    }
+
+    .navbar a {
+        display: block;
+        margin: 8px 0;
+        font-size: 1.2rem;
+    }
+
+    section {
+        margin: 40px 10px;
+        padding: 15px;
+    }
+}

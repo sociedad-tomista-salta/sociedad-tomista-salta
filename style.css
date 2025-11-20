@@ -125,7 +125,7 @@ main#content {
   max-width: var(--maxw);
   margin: 0 auto;
   line-height: 1.55;
-   padding-top: 220px; /* 140px del nav + 80px de header aproximado */
+   padding-top: 80px; /* 140px del nav + 80px de header aproximado */
 }
 
 /* Títulos del contenido */

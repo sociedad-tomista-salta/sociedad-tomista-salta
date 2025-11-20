@@ -1,66 +1,57 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sociedad Tomista Salta</title>
 
-  <title>Sociedad Tomista Salta</title>
+    <!-- Tipografías neotomistas -->
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet">
 
-  <!-- Tipografías -->
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:wght@400;500;600&display=swap" rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
 
-  <!-- CSS -->
-  <link rel="stylesheet" href="style.css">
+    <!-- Script para cargar secciones si usás app.js -->
+    <script defer src="app.js"></script>
 </head>
 
 <body>
-<div class="header-wrapper"> 
-  <!-- ================= HEADER ================= -->
-  <header class="header-sociedad">
-    <img src="logo_sts.png" alt="Sociedad Tomista Salta" class="logo-sts">
-    <h1>Sociedad Tomista Salta</h1>
-  </header>
 
-  <!-- ================= NAVBAR ================= -->
-  <nav class="navbar">
-    <ul>
-      <li><a href="#" data-section="presentacion">Inicio</a></li>
-      <li><a href="#" data-section="formacion">Formación</a></li>
-      <li><a href="#" data-section="difusion">Difusión</a></li>
-      <li><a href="#" data-section="comunidad">Comunidad</a></li>
-      <li><a href="#" data-section="espiritual">Espiritualidad</a></li>
-      <li><a href="#" data-section="contacto">Contacto</a></li>
-    </ul>
-  </nav>
-</div>
-  <!-- ================= CONTENIDO ================= -->
-  <main id="content">
-    <h2>Bienvenido a la Sociedad Tomista de Salta</h2>
-    <p>Seleccioná una sección del menú para ver su contenido.</p>
-  </main>
+    <!-- =============================
+         HEADER (LOGO + TÍTULO)
+         ============================= -->
+    <header>
+        <img src="logo_sts.png" alt="Escudo Sociedad Tomista Salta">
+        <h1>Sociedad Tomista Salta</h1>
+    </header>
 
-  <!-- ================= FOOTER ================= -->
-  <footer>
-    <p>&copy; 2025 Sociedad Tomista Salta</p>
-  </footer>
+    <!-- =============================
+         NAVBAR
+         ============================= -->
+    <nav class="navbar">
+        <a href="#" data-section="presentacion">Inicio</a>
+        <a href="#" data-section="formacion">Formación</a>
+        <a href="#" data-section="difusion">Difusión</a>
+        <a href="#" data-section="comunidad">Comunidad</a>
+        <a href="#" data-section="espiritual">Espiritualidad</a>
+        <a href="#" data-section="contacto">Contacto</a>
+    </nav>
 
-  <!-- Librería para convertir Markdown -->
-  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <!-- =============================
+         CONTENIDO DINÁMICO
+         ============================= -->
+    <section id="content">
+        <h2>Bienvenido a la Sociedad Tomista de Salta</h2>
+        <p>Seleccioná una sección del menú para ver su contenido.</p>
+    </section>
 
-  <!-- JS de la página -->
-  <script src="app.js">
-    function ajustarPadding() {
-    const wrapper = document.querySelector(".header-wrapper");
-    const main = document.querySelector("main#content");
+    <!-- =============================
+         FOOTER
+         ============================= -->
+    <footer>
+        <p>&copy; 2025 Sociedad Tomista Salta. Todos los derechos reservados.</p>
+    </footer>
 
-    const altura = wrapper.offsetHeight;
-    main.style.paddingTop = (altura + 20) + "px"; 
-  }
-
-  window.addEventListener("load", ajustarPadding);
-  window.addEventListener("resize", ajustarPadding);
-  </script>
 </body>
-
 </html>
+

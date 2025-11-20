@@ -12,6 +12,8 @@
 /* Reset */
 * { box-sizing: border-box; }
 body {
+   /*veamos si con el padding se corrige el problema con el navbar*/
+   padding-top: 220px;
   margin: 0;
   background: var(--bg);
   color: var(--text);
@@ -29,6 +31,14 @@ body {
   padding: 25px 0 15px 0;
   background: var(--bg);
   border-bottom: 2px solid var(--accent);
+   /*veamos si ahora aprace el logo y queda fijo:*/
+   position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+z-index: 2000;
+text-align: center;
+
 }
 
 .logo-sts {
@@ -46,6 +56,10 @@ body {
   letter-spacing: 2px;       /* más elegante */
   text-transform: uppercase;
   font-weight: 700;
+/*veamos si mejora con esto el título:*/
+   width: 100%;
+text-align: center;
+
 }
 
 /* ================================================================
